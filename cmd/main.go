@@ -1,20 +1,11 @@
-# meross
-Golang interface to Meross API based on the Python library https://github.com/albertogeniola/MerossIot
+package main
 
-## build
+import (
+	"fmt"
+	"os"
 
-```bash
-make
-```
-
-## test
-```bash
-make test
-```
-
-## usage
-```go
-import "github.com/codeboten/meross"
+	"github.com/codeboten/meross/api"
+)
 
 func main() {
 	client := api.NewClient(os.Getenv("MEROSS_EMAIL"), os.Getenv("MEROSS_PASSWORD"))
@@ -31,7 +22,9 @@ func main() {
 	if len(devices) == 0 {
 		fmt.Printf("No devices found")
 		return
-    }
-    fmt.Printf("Found devices: %v\n", devices)
+	}
+
+	fmt.Printf("Found devices: %v\n", devices)
+	devices[0].TurnOn()
+	devices[0].TurnOff()
 }
-```
