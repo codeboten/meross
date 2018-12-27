@@ -7,6 +7,9 @@ deps:
 test:
 	cd api && go test
 
+cover:
+	cd api && go test -cover
+
 build-client:
 	cd cmd && go build -o meross-client
 
