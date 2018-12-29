@@ -1,5 +1,5 @@
 # meross
-Golang interface to Meross API based on the Python library https://github.com/albertogeniola/MerossIot
+Golang library to Meross API based on the Python library https://github.com/albertogeniola/MerossIot
 
 ## build
 
@@ -31,7 +31,7 @@ func main() {
 	if len(devices) == 0 {
 		fmt.Printf("No devices found")
 		return
-    }
-    fmt.Printf("Found devices: %v\n", devices)
+	}
+	fmt.Printf("Found devices: %v\n", devices)
 }
 ```
